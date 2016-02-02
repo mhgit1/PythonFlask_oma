@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Register{{super()}}{% endblock %}
+{% block head %}
+    {{super()}}
+    <style>
+        .my_container{
+         
+            width: 500px;
+            margin: 3px auto;
+            padding: 8px;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+    </style>
+{% endblock %}
+{% block navbar %}{{super()}}{% endblock %}
+{% block body %}
+    {{super()}}
+    <h2>Hello {{name}}</h2>
+
+{% endblock %}
