@@ -1,0 +1,2 @@
+
+Tämä PythonFlask_oma on sama, kuin PythonFlask, mutta SQLite ym. asennukset tehty omalla koneella, niin toimii.

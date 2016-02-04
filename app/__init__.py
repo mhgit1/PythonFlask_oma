@@ -9,9 +9,17 @@ from flask.ext.sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 
-#This line configures our app using the config.py file
+#This line configures that our app is using the config.py file
 app.config.from_object('config')
 bootstrap = Bootstrap(app)
 #Annetaan funktiolle app objekti, joka sisältää config.py tiedot
 db = SQLAlchemy(app)
+
+from blueprint.ud.ud_blueprint import ud   ##blueprint/ud/ud_blueprint.py
+#Register all needed blueprints
+app.register_blueprint(ud)
+
+from blueprint.auth.auth_blueprint import auth  
+app.register_blueprint(auth)
+
 from app import routers

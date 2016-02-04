@@ -10,10 +10,14 @@
             <a class="navbar-brand" href="/">Flasky</a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/register">Register</a> </li>
-                <li><a href="/addfriend">Add Friend</a> </li>
+            <ul class="nav navbar-nav">   
+                {% if isLogged == False %}
+                    <li><a href="/register">Register</a> </li>
+                {% else %}
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/app/friends">Add Friend</a> </li>
+                    <li><a href="/logout">Logout</a> </li>
+                {% endif %}
             </ul>
         </div>
     </div>
